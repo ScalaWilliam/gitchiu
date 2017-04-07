@@ -1,15 +1,8 @@
 install: true
 script:
 - echo yay
-before_deploy:
-- sudo pip install awscli
-deploy:
-  provider: script
-  script: deploy.sh
-  skip_cleanup: true
-  on:
-    branch: master
-after_success: 
+after_success:
+  - test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" && sudo pip install awscli && ./deploy.sh
 env:
   global:
   - secure: Iz1w7c5GArNxdAsyvwPQrbRYFdISHCpRfU4jqun5Cyk8h8lwy8aqHUkAUdIIxPTA/zqONVg5uspAC7sUF/HC6Nat9TWGcq43UBfX2PQD9d6A/Pl6bGsys1rLee5LAbsygPUwIOphLMYOoVE8PbUH7tB5XnOuu6UqQNESkn0nrzYCkl6/ICIGwIUySeO4uzsyYUW59L1+wT/JoSuTJdQ5beNnnWqx8bX/hIIfrlaHl6uJEj+aTLlnKx2cUNMLd8laz7MStd5k485EJBwYVnndu7lmlPJ+AcaBZQSBVAs4trUr3dJgwa9VjaL/23ibyEU1Cy3wJKWNW8i+RlxLs6D1H06wFS+ReyZUYhZKzf1I77wInnRzer+72diDg+a9HCS9wIqaZjRlxVZk/bN6Tk5CucHynAWq1TOk00pfgEN3zvxWnCZ0Naw0Ukshqp7Nk4l/oYR5YyAsQMZK57RVfv6oQCqC1G3ATtXJtqmlKpmAB8vemqsWXWYFg3Uqn1JY5se/MR+VSOcb4BkexhrWNvAYR23yJHoHhmkVXOiwKWhkLMKjk+cI2bD1KGDhelxPyTj7keQ2IQmKNuQZg8ocBWUPRr+Y5T4H9rbuxHjDLDub6124FmwGkl/4/nP1scDzIzKvLReq9dVU4n+ITmliBk0GrjJ7xsoj46P5+Zi8e/WXNpE=
