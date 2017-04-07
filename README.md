@@ -1,4 +1,4 @@
-# gitshu
+# gitshu  [![Build Status](https://travis-ci.org/ScalaWilliam/gitshu.svg?branch=master)](https://travis-ci.org/ScalaWilliam/gitshu)
 > Convert Git commit descriptions to Issues
 
 When you make a push to `master` branch, commits with description such as:
