@@ -1,4 +1,6 @@
-language: python
+install: true
+script:
+- echo yay
 before_deploy:
 - sudo pip install awscli
 deploy:
