@@ -1,0 +1,3 @@
+Description: |
+  Turns Git commits into GitHub issues when GitHub push is received.
+
