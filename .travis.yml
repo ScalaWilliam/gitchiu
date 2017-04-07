@@ -1,6 +1,6 @@
 install: true
 script:
-- echo yay
+- echo it works
 after_success:
   - test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" && sudo pip install awscli && ./deploy.sh
 env:
