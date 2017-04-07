@@ -17,7 +17,6 @@ When you make a push to `master` branch, commits with description such as:
 Then `gitshu` will create two new Issues. The first one will have
 the title `NotImplementedError in ThisClass.processRecord` and body:
 
-    New Issue: NotImplementedError in ThisClass.processRecord
     I didn't have the time to implement everything needed:
     * Test fails but is ignored
     * Another piece of code is potentially not thread-safe
