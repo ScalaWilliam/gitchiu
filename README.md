@@ -46,4 +46,4 @@ Yes, it's serverless. You don't need to expose your private contents to anyone.
 
 [![Launch CloudFormation Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=gitshu&templateURL=https://gitshu.s3.amazonaws.com/templates/gitshu-cloudformation.yml)
 
-The stack file `gitshu-cloudformation.yml` is automatically synchronised from `master` branch.
+The stack file `gitshu-cloudformation.yml` is automatically synchronised from `master` branch. The code is also automatically deployed to CloudFormation.
