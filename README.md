@@ -39,4 +39,3 @@ It is perfect in incremental development scenarios.
 Now your Git history starts looking better and you focus on 
 creating issues straight from your local environment instead of having to juggle
 many different UIs.
-
